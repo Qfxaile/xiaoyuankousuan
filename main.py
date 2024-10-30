@@ -22,7 +22,7 @@ def init():
 
 def take_screenshot(path: str):
     """获取手机截屏,保存到path"""
-    screenshot_path = "/sdcard/Qfxaile/screenshot.png"
+    screenshot_path = "/sdcard/screenshot.png"
     subprocess.run(["adb", "shell", "screencap", "-p", screenshot_path])
     subprocess.run(["adb", "pull", screenshot_path, path])
     subprocess.run(["adb", "shell", "rm", screenshot_path])
